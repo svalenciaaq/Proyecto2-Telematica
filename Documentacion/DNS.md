@@ -1,3 +1,3 @@
 
 
-![DNS1](../img/dns1.png)
+![DNS1](../img/dns1.PNG)
