@@ -25,7 +25,7 @@ En este documento se especificara todas las pautas necesarias para el dasarollo 
 ### Documentacion del DNS
 
 
-[Documentacion del DNS](https://https://github.com/svalenciaaq/Proyecto2-Telematica/blob/main/Documentacion/DNS.md)
+[Documentacion del DNS](https://github.com/svalenciaaq/Proyecto2-Telematica/blob/main/Documentacion/DNS.md)
 
 
 ### Documentacion de certificados de seguridad
