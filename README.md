@@ -24,13 +24,23 @@ En este documento se especificara todas las pautas necesarias para el dasarollo 
 
 ### Documentacion del DNS
 
+
+[Documentacion del DNS](https://https://github.com/svalenciaaq/Proyecto2-Telematica/blob/main/Documentacion/DNS.md)
+
+
 ### Documentacion de certificados de seguridad
 
+[Documentacion del certificado de seguridad](https://github.com/svalenciaaq/Proyecto2-Telematica/blob/main/Documentacion/Certificado.md)
+
 ### Documentacion de los servicios utilizados AWS/otros y el proceso de instalacion monolitica individual en AWS
+
+[Documentacion de la monolitica](https://github.com/svalenciaaq/Proyecto2-Telematica/blob/main/Documentacion/Monolitica.md)
 
 
 ###  Documentación de los servicios utilizados AWS/otros y el proceso de instalación en AWS. 
 
+[Documentacion de la escalable](https://github.com/svalenciaaq/Proyecto2-Telematica/blob/main/Documentacion/Escalable.md)
 
 ### Analisis de costos de la solucion. Inversion inicial y mensual
 
+[Documentacion de los costos](https://github.com/svalenciaaq/Proyecto2-Telematica/blob/main/Documentacion/Costos.md)
