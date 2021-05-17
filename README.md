@@ -1,5 +1,12 @@
 - [Proyecto2-Telematica](#proyecto2-telematica)
   - [Descripcion](#descripcion)
+  - [Analisis y Diseño](#analisis-y-diseño)
+  - [Proceso de instalacion](#proceso-de-instalacion)
+    - [Documentacion del DNS](#documentacion-del-dns)
+    - [Documentacion de certificados de seguridad](#documentacion-de-certificados-de-seguridad)
+    - [Documentacion de los servicios utilizados AWS/otros y el proceso de instalacion monolitica individual en AWS](#documentacion-de-los-servicios-utilizados-awsotros-y-el-proceso-de-instalacion-monolitica-individual-en-aws)
+    - [Documentación de los servicios utilizados AWS/otros y el proceso de instalación en AWS.](#documentación-de-los-servicios-utilizados-awsotros-y-el-proceso-de-instalación-en-aws)
+    - [Analisis de costos de la solucion. Inversion inicial y mensual](#analisis-de-costos-de-la-solucion-inversion-inicial-y-mensual)
 
 
 # Proyecto2-Telematica
@@ -8,4 +15,22 @@ Proyecto para el desarollo de un sistema de software robusto, escalable, con alt
 ## Descripcion
 
 En este documento se especificara todas las pautas necesarias para el dasarollo de un sistema robusta,escalable, con alta disponibilidad, buen rendimiento y con los requerimientos de seguridad basado en los diferentes servicios que son proporcionados por aws educate.
+
+## Analisis y Diseño
+
+
+
+## Proceso de instalacion
+
+### Documentacion del DNS
+
+### Documentacion de certificados de seguridad
+
+### Documentacion de los servicios utilizados AWS/otros y el proceso de instalacion monolitica individual en AWS
+
+
+###  Documentación de los servicios utilizados AWS/otros y el proceso de instalación en AWS. 
+
+
+### Analisis de costos de la solucion. Inversion inicial y mensual
 
