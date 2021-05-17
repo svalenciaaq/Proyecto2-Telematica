@@ -1,4 +1,24 @@
 
+## Creacion de la instacian EC2
+
+![MON1](../img/mon1.PNG)
+![MON2](../img/mon2.PNG)
+![MON3](../img/mon3.PNG)
+![MON4](../img/mon4.PNG)
+![MON5](../img/mon5.PNG)
+![MON6](../img/mon6.PNG)
+![MON7](../img/mon7.PNG)
+
+
+
+
+
+
+
+
+
+## instalacion de docker
+
 ```
 sudo amazon-linux-extras install docker 
 
@@ -59,6 +79,5 @@ services:
 volumes:
   wordpress:
   db:
-
 
 ```
