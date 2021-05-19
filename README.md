@@ -19,6 +19,8 @@ En este documento se especificara todas las pautas necesarias para el dasarollo 
 ## Analisis y Diseño
 
 
+[Documentacion del analisis y diseño](https://github.com/svalenciaaq/Proyecto2-Telematica/blob/main/Documentacion/AnalisisDiseño.md)
+
 
 ## Proceso de instalacion
 
