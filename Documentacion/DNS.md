@@ -1,20 +1,20 @@
 
-# Documentacion para el DNS
+# **Documentacion para el DNS**
 
-## Tabla de contenidos
-- [Documentacion para el DNS](#documentacion-para-el-dns)
-  - [Tabla de contenidos](#tabla-de-contenidos)
-  - [Descripcion](#descripcion)
-  - [Proceso de  migracion de freenom a cloudflare](#proceso-de--migracion-de-freenom-a-cloudflare)
-  - [Configuracion del DNS](#configuracion-del-dns)
+## **Tabla de contenidos**
+- [**Documentacion para el DNS**](#documentacion-para-el-dns)
+  - [**Tabla de contenidos**](#tabla-de-contenidos)
+  - [**Descripcion**](#descripcion)
+  - [**Proceso de  migracion de freenom a cloudflare**](#proceso-de--migracion-de-freenom-a-cloudflare)
+  - [**Configuracion del DNS**](#configuracion-del-dns)
 
 
 
-## Descripcion
+## **Descripcion**
 
 En este documento se especifica la configuracion de un servicio de DNS, proveniente de cloudflare donde se configurar un dominio en este, esto con la intencion de hacer uso de los beneficios que proporciona cloudflare
  
-## Proceso de  migracion de freenom a cloudflare
+## **Proceso de  migracion de freenom a cloudflare**
 
 En estos se buscara migrar el manejo del DNS desde freenom hacia cloudflare.
 
@@ -63,7 +63,7 @@ Por ultimo comprobaremos que las configuraciones dadas si estan correctas
 ![DNS11](../img/dns11.PNG)
 
 
-## Configuracion del DNS
+## **Configuracion del DNS**
 
 Cuando se termine la migracion del DNS procederemos  a configurar los registros de los DNS
 

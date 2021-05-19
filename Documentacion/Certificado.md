@@ -1,24 +1,24 @@
 
-# Documentacion para la incorporacion de certificados ssl en el dominio
+# **Documentacion para la incorporacion de certificados ssl en el dominio**
 
-## Tabla de contenidos
-- [Documentacion para la incorporacion de certificados ssl en el dominio](#documentacion-para-la-incorporacion-de-certificados-ssl-en-el-dominio)
-  - [Tabla de contenidos](#tabla-de-contenidos)
-  - [Introduccion](#introduccion)
-  - [Desarollo](#desarollo)
-    - [Generacion del certificado en la maquina monolitica](#generacion-del-certificado-en-la-maquina-monolitica)
-    - [Pasos extras para el desarollo en el sistema escalable](#pasos-extras-para-el-desarollo-en-el-sistema-escalable)
-  - [Conclusiones](#conclusiones)
+## **Tabla de contenidos**
+- [**Documentacion para la incorporacion de certificados ssl en el dominio**](#documentacion-para-la-incorporacion-de-certificados-ssl-en-el-dominio)
+  - [**Tabla de contenidos**](#tabla-de-contenidos)
+  - [**Introduccion**](#introduccion)
+  - [**Desarollo**](#desarollo)
+    - [**Generacion del certificado en la maquina monolitica**](#generacion-del-certificado-en-la-maquina-monolitica)
+    - [**Pasos extras para el desarollo en el sistema escalable**](#pasos-extras-para-el-desarollo-en-el-sistema-escalable)
+  - [**Conclusiones**](#conclusiones)
 
 
-## Introduccion 
+## **Introduccion**
 
 En este documento se especifica la creacion de certificados ssl para peticiones https, atraves del proveedor de este servicio en este caso letsencrypt, se busca atraves vez de esta documentacion explicar el proceso por el cual se piden certificados tanto para maquinas monoliticas como para sistemas escalables en la nube
 
 
-## Desarollo
+## **Desarollo**
 
-### Generacion del certificado en la maquina monolitica
+### **Generacion del certificado en la maquina monolitica**
 
 Primero instalaremos nginx, debido a que este nos servira para comprobar los certificados junto con certbot.
 
@@ -82,7 +82,7 @@ cd /home/ec2-user/wordpress
 docker-compose up --build -d
 ```
 
-### Pasos extras para el desarollo en el sistema escalable
+### **Pasos extras para el desarollo en el sistema escalable**
 
 En el caso para el sistema escalable deberemos incorporar los certificados al balanceador de carga, esto atraves de los listener que proporciona
 
@@ -110,6 +110,6 @@ Por ultimo agregaremos los certificados que fueron generados en los pasos anteri
 ![CERT3](./../img/cert3.png)
 
 
-## Conclusiones
+## **Conclusiones**
 
 Como se observa la obtencion de los certificados ssl, no es algo muy complicado debido a que se tiene servicios muy faciles de implementar para esto, cabe recalcar que en este caso se utiliza los certificados generados en el load balancer debido a que aws educate no permite la generacion automatica de estos, como si los ofreceria en cuentas comunes

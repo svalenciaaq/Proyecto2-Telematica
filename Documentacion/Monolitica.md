@@ -1,18 +1,26 @@
 
-- [Documentacion para la creacion de un sistema monolitico basado en wordpress](#documentacion-para-la-creacion-de-un-sistema-monolitico-basado-en-wordpress)
-  - [Creacion de la instacian EC2](#creacion-de-la-instacian-ec2)
-  - [Instalacion de docker](#instalacion-de-docker)
+# **Documentacion para la creacion de un sistema monolitico basado en wordpress**
+
+
+## **Tabla de contenidos**
+
+
+- [**Documentacion para la creacion de un sistema monolitico basado en wordpress**](#documentacion-para-la-creacion-de-un-sistema-monolitico-basado-en-wordpress)
+  - [**Tabla de contenidos**](#tabla-de-contenidos)
+  - [**Introduccion**](#introduccion)
+  - [**Creacion de la instacian EC2**](#creacion-de-la-instacian-ec2)
+  - [**Instalacion de docker**](#instalacion-de-docker)
   - [Instalación Docker-compose en la VM de AWS EC2](#instalación-docker-compose-en-la-vm-de-aws-ec2)
-  - [Instalacion Wordpress con Docker en AWS](#instalacion-wordpress-con-docker-en-aws)
+  - [**Instalacion Wordpress con Docker en AWS**](#instalacion-wordpress-con-docker-en-aws)
 
 
 
-# Documentacion para la creacion de un sistema monolitico basado en wordpress
+## **Introduccion**
 
 En este documento se explica la creacion de un sistema monolitico basado en wordpress, el sistema sera realizado con docker y la herramiento docker-compose, donde se descargaran las imagen provenientes del docker hub, tanto para la instancia del wordpress como para la instancia de la base de datos, todo este soportado por los servicios de aws educate.
 
 
-## Creacion de la instacian EC2
+## **Creacion de la instacian EC2**
 
 Empezaremos creando la instancia EC2 en amazon para esto, en el dashboard de aws, escogeremos el servicio EC2, y escogeremos el launch instance
 
@@ -43,7 +51,7 @@ Como se puede observar en la imagen se selecciona los puertos
 ![MON7](../img/mon7.PNG)
 
 
-## Instalacion de docker
+## **Instalacion de docker**
 
 Instalaremos docker para manejar el sistema atraves de contenedores, ademas  de instalar git.
 
@@ -73,7 +81,7 @@ sudo reboot
 
 ```
 
-## Instalacion Wordpress con Docker en AWS
+## **Instalacion Wordpress con Docker en AWS**
 
 Para la instalacion del wordpress crearemos un archivo docker-compose.yml donde pondremos el contenido que esta abajo, en este caso podremos modificar las credenciales de conexion a la base de datos que garantize el funcionamiento de la aplicacion
 
