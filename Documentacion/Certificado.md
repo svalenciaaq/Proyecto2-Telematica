@@ -107,7 +107,7 @@ Por ultimo agregaremos los certificados que fueron generados en los pasos anteri
 * Certificate chain(PEM encoded): (copy-paste de chain.pem)
 
 
-![CERT3](./../img/cert3.PNG
+![CERT3](./../img/cert3.PNG)
 
 
 ## **Conclusiones**
