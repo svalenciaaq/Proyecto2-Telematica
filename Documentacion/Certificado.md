@@ -92,11 +92,11 @@ Se ingresa al servicio de load balancer y se presiona en listeners
 
 Se presiona Add listener para agregar un nuevo listener
 
-![CERT2](./../img/cert2.png)
+![CERT2](./../img/cert2.PNG)
 
 En el protocolo pondremos https y en la acciones pondremos Fordwar to(El servicio de target configurado para este)
 
-![CERT4](./../img/cert4.png)
+![CERT4](./../img/cert4.PNG)
 
 
 Por ultimo agregaremos los certificados que fueron generados en los pasos anteriores para mas claridad se describira cada uno de los certificados utilizados.
@@ -107,7 +107,7 @@ Por ultimo agregaremos los certificados que fueron generados en los pasos anteri
 * Certificate chain(PEM encoded): (copy-paste de chain.pem)
 
 
-![CERT3](./../img/cert3.png)
+![CERT3](./../img/cert3.PNG
 
 
 ## **Conclusiones**
