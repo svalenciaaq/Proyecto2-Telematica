@@ -201,24 +201,25 @@ Ahora, seleccione la “Public Route Table B” y en la pestaña de “Subnet As
 
 En el panel izquierdo seleccione la opción de “Instances” seleccione la opción “launch instances", luego: 
 
-![img](https://imgur.com/SN2lEop)
+<img src="/Documentacion/Screens/LaunchInstances.png" alt="img"/>
 
 - Escoja la imagen de Amazon Machine Image (AMI) 
 	- Seleccione Amazon Linux 2 AMI (HVM), SSD Volume Type.  
 
-![img](https://imgur.com/X6iw0mr)
+<img src="/Documentacion/Screens/AMISelection.png" alt="img"/>
 
 - Seleccione el tipo de instancia t2.micro (columna type) 
 	- Next : Configure Instance details. 
 
-![img](https://imgur.com/yGyi4l5)
+<img src="/Documentacion/Screens/Tipo de instancia.png" alt="img"/>
 
 - Ahora configure, los siguientes parámetros:  
 	- Network: MyLabVPC  
 	- Subnet: Public Subnet A.  
 	- Auto-assign Public IP: Enable 
 
-![img4](https://imgur.com/I0Surjy)
+<img src="/Documentacion/Screens/detalles instancia.png" alt="img"/>
+
 
 
 - Clic en “Next:Add storage”.  
