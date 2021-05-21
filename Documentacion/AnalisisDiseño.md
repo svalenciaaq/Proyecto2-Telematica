@@ -7,3 +7,12 @@ De esta manera se garantiza la alta disponibilidad en el despliegue, pues se van
 
 <img src="/Documentacion/Screens/Arquitectural Design.png" alt="img"/>
 
+
+Todo esto esta organizado una UI desarrollada en wordpress, el cual esta contenido en docker.
+
+<img src="/Documentacion/Screens/Wordpress_UI.png" alt="img"/>
+
+
+<img src="/Documentacion/Screens/UI_diagram.jpeg" alt="img"/>
+
+
