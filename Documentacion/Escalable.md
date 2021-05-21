@@ -34,9 +34,133 @@
 
 ### Creacion y configurar la vpc
 
+Seleccione el servicio de VPC.
+	- En el panel izquierdo seleccione la opción de “Your VPCs”
+	
+<img src="/Documentacion/Screens/VPCSelection.png" alt="img"/>
+
+ Click en Create VPC.
+	- Name: MyWebAPP-VPC
+	- IPv4 CIDR block: RR.RR.0.0/16
+	- Click “Create VPC”
+
+<img src="/Documentacion/Screens/VPCSelection.png" alt="img"/>
+
+Debe aparecer mensaje de que la VPC se ha creado de manera exitosa.
+**En el panel izquierdo seleccione “Your VPCs”. Se debe visualizar la VPC por defecto y la nueva**
+
+<img src="/Documentacion/Screens/YourVPC.png" alt="img"/>
+
+
 ### Creacion y configuracion de las subredes
 
+En la sección de VPC, en el panel izquierdo, localice la opción de “Subnets”.
+	- Clic en “Subnets”.
+	- Clic en “Create subnet”. 
+
+Primero crearemos la subred privada y luego la pública.
+	- Name tag: Private Subnet A
+	- VPC*: Seleccione MyWebApp-VPC
+	- Availability Zone: Seleccione la primera zona disponible.
+	- IPv4 CIDR block*: RR.RR.1.0/24
+	
+**Debe aparecer un mensaje que la subred fue creada de manera exitosa.**
+	
+Otra vez, click en “Create subnet” para crear la subred privada.
+- Name tag: Public Subnet A
+- VPC*: Seleccione MyWebApp-VPC
+- Availability Zone: Seleccione la primera zona disponible.
+- IPv4 CIDR block*: RR.RR.2.0/24
+**Debe aparecer un mensaje que la subred fue creada de manera exitosa.**
+
+Otra vez, click en “Create subnet” para crear la subred privada.
+- Name tag: Private Subnet B
+- VPC*: Seleccione MyWebApp-VPC
+- Availability Zone: Seleccione la segunda zona disponible.
+- IPv4 CIDR block*: RR.RR.3.0/24
+**Debe aparecer un mensaje que la subred fue creada de manera exitosa.**
+
+Otra vez, click en “Create subnet” para crear la subred privada.
+- Name tag: Public Subnet B
+- VPC*: Seleccione MyWebApp-VPC
+- Availability Zone: Seleccione la segunda zona disponible.
+- IPv4 CIDR block*: RR.RR.4.0/24
+**Debe aparecer un mensaje que la subred fue creada de manera exitosa.**
+
 ### Creacion y configuracion de las NATs instance
+
+Permite enviar tráfico de los equipos que están en la red privada hacia Internet en cada
+	- Escoja el servicio de EC2. 
+	- En el panel izquierdo seleccione la opción de “Instances”
+	
+<img src="/Documentacion/Screens/EC2Selection.png" alt="img"/>
+
+
+<img src="/Documentacion/Screens/Tipo de instancia.png" alt="img"/>
+
+**NAT Instance AZ-A**:
+- Busque la imagen: 
+	- amzn-ami-vpc-nat-hvm-2018.03.0.20181116-x86_64-ebs
+- Seleccione 
+	- Amazon Linux AMI 2018.03.0.20181116 x86_64 VPC HVM ebs. Click en select.
+- Seleccione el tipo de instancia t2.micro (columna type).
+- Clic en “Next:Configure Instance details”.
+- Ahora configure, los siguientes parámetros:
+	- Network: MyWebAPP-VPC
+	- Subnet: Public Subnet A.
+	- Auto-assign Public IP: Enable
+- Click en “Next:Add storage”.
+- Click en “Next:Add tags”.
+	- Key: Name.
+	- Value: NAT-Instance A
+- Click en “Next:Configure security group”:
+	- Seleccione la opción de un security group existente. Seleccione “SG-NAT-Instance”
+- Click en “Next:Review instance and launch”.
+- Click en “Launch”.
+- Seleccione an existing key pair or create a new key pair.
+	- Seleccione el key pair que ud ha creado para el curso.
+	- 
+Para que trabaje de forma adecuada se debe detener la característica de “source/destination checking”. 
+
+Realice lo siguiente:
+
+- Seleccione el servicio de EC2. En el panel izquierdo click en instances. Click en Running instances.
+- Seleccione la casilla de “NAT Instance” desplegada.
+- Click en “Actions”. Click en Networking. Click en “Change source/destination check”.
+- Seleccione la casilla “Stop”.
+- Click en “Save”.
+
+
+NAT Instance AZ-B:
+
+Se ejecutan los mismos pasos, simplemente que se despliega en la subred de la zona de disponibilidad B:
+
+- Busque la imagen: amzn-ami-vpc-nat-hvm-2018.03.0.20181116-x86_64-ebs
+- Seleccione Amazon Linux AMI 2018.03.0.20181116 x86_64 VPC HVM ebs. Click en select.
+- Seleccione el tipo de instancia t2.micro (columna type) y click en “Next:Configure Instance details”.
+- Ahora configure, los siguientes parámetros:
+	- Network: MyWebAPP-VPC
+	- Subnet: Public Subnet B.
+	- Auto-assign Public IP: Enable
+- Click en “Next:Add storage”.
+- Click en “Next:Add tags”.
+	- Key: Name.
+	- Value: NAT-Instance B
+- Click en “Next:Configure security group”:
+	- Seleccione la opción de un security group existente. Seleccione “SG-NAT-Instance”
+- Click en “Next:Review instance and launch”.
+- Click en “Launch”.
+- Seleccione an existing key pair or create a new key pair.
+	- Seleccione el key pair que ud ha creado para el curso.
+Para que trabaje de forma adecuada se debe detener la característica de “source/destination checking”. 
+
+Realice lo siguiente:
+
+- Seleccione el servicio de EC2. En el panel izquierdo click en instances. Click en Running instances.
+- Seleccione la casilla de “NAT Instance” desplegada.
+- Click en “Actions”. Click en Networking. Click en “Change source/destination check”.
+- Seleccione la casilla “Stop”.
+- Click en “Save”
 
 ### Creacion y configuracion de las tablas de enrutamiento
 Las tablas de ruteo contienen conjuntos de reglas, denominadas rutas, que se usan para determinar a dónde se dirige el tráfico de red desde nuestra subred o gateway. 
@@ -233,12 +357,134 @@ En el panel izquierdo seleccione la opción de “Instances” seleccione la opc
 - Seleccione an existing key pair or create a new key pair. 
 	- Seleccione el key pair creado anteriormente
 
-### Creacion de los security gropu para trafico web y para la base de datos y
 
+### Creacion de los security group para trafico web y para la base de datos
+
+Escoja la opción “create security group” y configure los siguientes parámetros:
+	- Security group name: SG-Web
+	- Description: Enable HTTP Access
+	- VPC: MyWebApp-VPC
+	
+De click en “create security group”.
+
+Escoja la opción “create security group” y configure los siguientes parámetros:
+	- Security group name: SG-Web
+	- Description: Enable HTTP Access
+	- VPC: MyWebApp-VPC
+	
+De click en “create security group”.
+
+Una vez esté creado vamos a agregar las reglas de tráfico de entrada a este. En la pestaña de “Inbound rules”, click en “Edit inbound rules” y click en “add rule”. Configure los siguientes parámetros:
+	- Type: HTTP
+	- Source: Anywhere
+	- Description: Permit Web Requests
+	- Type: HTTPS
+	- Source: Anywhere
+	- Description: Permit HTTPS Requests
+	- Type: SSH
+	- Source: Anywhere
+	- Description: Permit SSH Requests
+	- Type: NFS
+	- Source: Anywhere
+	- Description: Permit NFS Requests for EFS
+	
+Click “Create security group”
+
+En el servicio de VPC, escoja la opción “create security group” y configure los siguientes parámetros:
+	- Security group name: SG-RDS-DB
+	- Description: Permit Access from web security group.
+	- VPC: MyWebApp-VPC
+	
+De click en “create security group”. Una vez esté creado vamos a agregar las reglas de tráfico de entrada a este. En la pestaña de “Inbound rules”:
+- Click en “Edit inbound rules”. Click “Add rule”. Configure los siguientes parámetros:
+- Click “Add rule”. Configure los siguientes parámetros:
+	- Type: MySQL/Aurora
+	- Source: Custom. Digite sg y seleccione el security group creado para web.
+	- Description: Allow DB connection.
+
+De esta forma se configura el security group de la bases de datos para aceptar las peticiones entrantes sobre el puerto 3306 desde cualquier instancia EC2 que esté asociada con ese security group
 
 ### Creacion y configuracion del servidor de bases de datos en la subred privada
 
+* Crear el grupo de subred para el servicio RDS.
+
+Antes que cualquier y con el fin de emplear el servicio de RDS, se debe crear un subnet group el cual es usado para decirle a la bases de datos cuales subredes pueden ser usadas por ésta
+
+- En la sección de servicios, escoja RDS.
+- En el panel de configuración izquierda, click en Subnet Groups.
+- Click en Create DB Subnet Group y configure los siguientes aspectos:
+	- Name: DB-Subnet Group.
+	- Description: Subnet group for RDS.
+	- VPC: MyWebbApp-VPC
+- Baje hasta la sección que permita adicionar las subredes.
+- Despliegue la lista de valores de subredes y seleccione las subredes asociadas con los rangos
+	RR.RR.1.0/24 y RR.RR.3.0 /24.
+- Click en create.
+- 
+Este grupo de subred de bases de datos va a ser utilizado para desplegar el motor de bases de datos.
+
+*  Crear una instancia de Amazon RDS.
+En esta sección se procederá a desplegar una instancia de bases de datos de MySql en un entorno de múltiples zonas de disponibilidad. Cuando se lanza este servicio, de manera automática amazon crea una instancia principal de la bases de datos y sincroniza los datos con una estancia secundaria que despliega en una zona de disponibilidad diferente en la cual desplegó la primera instancia. En la consola de gestión, seleccione el servicio de RDS. En el panel izquierdo, click en Databases.
+
+- Click Create database.
+- Click en el método Standard create.
+- Seleccione el motor de bases de datos MySQL.
+- Seleccione dev/test como template.
+- En la sección de settings.
+	- DB instance identifier: exampledb
+	- Master username: exampleuser
+	- Master password: examplepass
+	- Confirm password: examplepass
+- En la sección de DB instance size:
+	- DB instance class: seleccione burstable classes (includes t classes).
+	- Seleccione db.t2.micro.
+- En la sección Storage, configure:
+	- Storage type: General purpose (SSD).
+	- Allocated storage: 20
+- En la sección de Availability y durability:
+	- Multi-AZ deployment. Seleccione a standby instance (recommender for production
+usage).
+- En la sección de Connectivity
+	- Virtual Private Cloud: (VPC): MyWebApp-VPC.
+	- Expanda la opción para Additional connectivity configuration:
+		- Selecciona las zonas de disponibilidad y subredes para el despliegue de la base
+de datos. Recuerde que esta va ubicada en la subred privada.
+	- Public access: Click en No.
+	- Existing VPC security groups: Seleccione el security group definido para la BD.
+- En la sección de Database authentication:
+	- Seleccione Password authentication.
+- Expanda la opción para Additional configuration:
+	- Initial database name: wordpress.
+	- No marque la opción de “enable automatic backups”
+	- No marque la opción de “enable enhanced monitoring”
+- Click en create database. En este momento su bases de datos va a ser desplegada. Tomará unos 5 mins en ser desplegada
+
 ### Creacion y configuracion el sistema de archivos compartidos EFS
+
+crearemos un sistema de archivos EFS que será compartido por todas las instancias del Servidor Web/PHP (wordpress). Este sistema de archivos permite compartir todos los archivos de la aplicación wordpress así como todos los archivos estáticos que normalmente maneja un servidor CMS (imágenes, pdfs, videos, sonidos, y en general muchos otros tipos de archivos). Para esto, diríjase al “home” de la consola de administración de AWS. Escoja el servicio de EFS. 
+En el panel izquierdo seleccione la opción de “File Systems” seleccione la opción “Create file system” yejecute lo siguientes pasos:
+
+- Name - optional: WP-EFS
+- Virtual Private Cloud: (VPC): MyWebApp-VPC
+- Availability and Durability: Regional
+- Click. Create
+
+Una vez creado en sistema de archivos, hacer Click en WP-EFS y realice los siguientes cambios:
+
+- Click en “Network”
+- Click en “Manage”
+	- Borre en “Security groups” con la X el grupo de seguridad creado por defecto. Haga esto por cada zona de disponibilidad.
+	- Adicione en “Security groups” en cada zona de disponibilidad:
+		- Seleccione “Web Security Group”
+	- Click: Save
+	- 
+Obtener la dirección IP del punto de montaje: (*+*)
+- Le damos Click en WP-EFS (fs-f168b545)
+- Click en: Attach
+- Seleccione: Mount vía IP
+- Anote la <dirección-IP WP-EFS> del punto de montaje para actualizarlo en la instancia del Web Wordpress
+- Listo
+
 
 ### Creacion y configurar la instancia del servidor web wordpress
 
