@@ -191,7 +191,46 @@ Ahora, seleccione la “Public Route Table B” y en la pestaña de “Subnet As
 * Click en Save. 
 
 ### Creacion y configuracion de los bastion hosts
+- **Tabla de enrutamiento principal:**
+	- Bastion Host AZ-A:  
+	- Diríjase al “home”  
+	- Escoja el servicio de EC2. 
 
+
+![img](https://imgur.com/tF2v95l)
+
+En el panel izquierdo seleccione la opción de “Instances” seleccione la opción “launch instances", luego: 
+
+![img](https://imgur.com/SN2lEop)
+
+- Escoja la imagen de Amazon Machine Image (AMI) 
+	- Seleccione Amazon Linux 2 AMI (HVM), SSD Volume Type.  
+
+![img](https://imgur.com/X6iw0mr)
+
+- Seleccione el tipo de instancia t2.micro (columna type) 
+	- Next : Configure Instance details. 
+
+![img](https://imgur.com/yGyi4l5)
+
+- Ahora configure, los siguientes parámetros:  
+	- Network: MyLabVPC  
+	- Subnet: Public Subnet A.  
+	- Auto-assign Public IP: Enable 
+
+![img](https://imgur.com/I0Surjy)
+
+
+- Clic en “Next:Add storage”.  
+- Clic en “Next:Add tags”, nueva llave.  
+	- Llave: Name.  
+	- Valor: Bastion Host. 
+- Clic en “Next:Configure security group”:
+	- Seleccione la opción de un security group existente. Seleccione “SG-Bastion”. 
+- Clic en “Next: Review instance and launch”.  
+- Clic en “Launch”.  
+- Seleccione an existing key pair or create a new key pair. 
+	- Seleccione el key pair creado anteriormente
 
 ### Creacion de los security gropu para trafico web y para la base de datos y
 
