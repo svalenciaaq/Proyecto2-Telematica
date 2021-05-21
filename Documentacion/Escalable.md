@@ -2,7 +2,6 @@
 - [Documentacion para la creacion de un sistema escalable basado en wordpress](#documentacion-para-la-creacion-de-un-sistema-escalable-basado-en-wordpress)
   - [Introduccion](#introduccion)
   - [Recursos](#recursos)
-  - [Desarollo](#desarollo)
   - [Configuracion](#configuracion)
     - [Creacion y configurar la vpc](#creacion-y-configurar-la-vpc)
     - [Creacion y configuracion de las subredes](#creacion-y-configuracion-de-las-subredes)
