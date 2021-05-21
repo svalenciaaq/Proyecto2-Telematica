@@ -218,7 +218,7 @@ En el panel izquierdo seleccione la opción de “Instances” seleccione la opc
 	- Subnet: Public Subnet A.  
 	- Auto-assign Public IP: Enable 
 
-![img](https://imgur.com/I0Surjy)
+![img4](https://imgur.com/I0Surjy)
 
 
 - Clic en “Next:Add storage”.  
