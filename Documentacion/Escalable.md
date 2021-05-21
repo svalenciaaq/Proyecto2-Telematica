@@ -197,7 +197,7 @@ Ahora, seleccione la “Public Route Table B” y en la pestaña de “Subnet As
 	- Escoja el servicio de EC2. 
 
 
-![img](https://imgur.com/tF2v95l)
+<img src="/Documentacion/Screens/EC2Selection.png" alt="img"/>
 
 En el panel izquierdo seleccione la opción de “Instances” seleccione la opción “launch instances", luego: 
 
