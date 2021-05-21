@@ -23,12 +23,25 @@
 # Documentacion para la creacion de un sistema escalable basado en wordpress
 
 ## Introduccion
+Diseñado con respecto a la alta confiabilidad y accesibilidad, así como los aspectos de escalabilidad, Uno de los aspectos clave es definir cuántas áreas tenemos disponibles para considerar 
 
+Implementando su infraestructura y, por lo tanto, respalde la implementación de la aplicación.
+
+En este sentido, garantizar al menos dos áreas con alta accesibilidad asegura que las aplicaciones se implementan en centros de datos que están separados geográficamente por varios kilómetros.
 
 ## Recursos
 
+Para el desarrollo del siguiente laboratorio se dispondrán de los siguientes recursos web a través de la
+cuenta de AWS educate:
 
-## Desarollo
+- Servicio de VPC.
+- Servicio de RDS.
+- Servicio de EC2.
+- Servicio de ELB
+- Servicio de EFS
+
+En el servidor se desplegará una aplicación web. Para estos efectos se utilizará un CMS como wordpress y
+el motor de bases de datos será MySQL.
 
 ## Configuracion
 
